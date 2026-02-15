@@ -31,7 +31,7 @@ if (isset($_POST['sumbit'])) {
                     while ($row = mysqli_fetch_assoc($result)) {
                   ?>
 
-                  <form action="" method ="POST">
+                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method ="POST">
                       <div class="form-group">
                           <input type="hidden" name="cat_id"  class="form-control" value="<?php echo $row['category_id']; ?>" placeholder="">
                       </div>
