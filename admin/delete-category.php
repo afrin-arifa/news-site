@@ -1,6 +1,9 @@
 <?php
 include "config.php";
 
+if ($_SESSION['role'] == '0') {
+    header("Location: {$hostname}/admin/post.php");
+}
 $userid = $_GET['id'];
 $sql = "DELETE FROM category WHERE category_id = {$userid}";
 

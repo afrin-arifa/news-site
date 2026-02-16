@@ -1,5 +1,7 @@
 <?php include "header.php"; 
-
+if ($_SESSION['role'] == '0') {
+    header("Location: {$hostname}/admin/post.php");
+}
 include "config.php";
 if (isset($_POST['sumbit'])) {
     $cat_id = $_POST['cat_id'];
